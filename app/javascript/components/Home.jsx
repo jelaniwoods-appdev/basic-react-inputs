@@ -5,6 +5,8 @@ const Home = () => {
   return (
     <div>
       <Input inputType={"text"} />
+      <Input inputType={"number"} />
+      <Input inputType={"checkbox"} />
     </div>
   )
 }
