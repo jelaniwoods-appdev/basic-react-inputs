@@ -2,10 +2,12 @@ import React, { useState } from "react"
 
 function Input({ inputType }) {
 
-  const [input, setInput] = useState("")
+  const startValue = inputType === "checkbox" ? false : ""
+  const [input, setInput] = useState(startValue)
 
   const handleChange = (event) => {
     const {value, type, checked} = event.target
+    console.log(checked)
     type === "checkbox" ? setInput( prevInput => checked ) : setInput( prevInput => value )
   }
 
@@ -20,7 +22,7 @@ function Input({ inputType }) {
         value={input}
         onChange={handleChange} 
       />
-      <h3>{input}</h3>
+      <h3>{input.toString()}</h3>
     </div>
   )
 }

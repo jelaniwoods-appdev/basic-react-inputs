@@ -7,6 +7,8 @@ const Home = () => {
       <Input inputType={"text"} />
       <Input inputType={"number"} />
       <Input inputType={"checkbox"} />
+      <Input inputType={"date"} />
+      <Input inputType={"datetime-local"} />
     </div>
   )
 }
